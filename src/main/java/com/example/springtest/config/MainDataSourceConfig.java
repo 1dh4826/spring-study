@@ -36,6 +36,8 @@ public class MainDataSourceConfig {
             throws Exception {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(mainDataSource);
+
+        // java与xml放在同一包下，无需设置映射文件位置
 //        sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver()
 //                .getResources(MainDataSourceConfig.MAPPER_LOCATION));
         return sessionFactory.getObject();
