@@ -1,0 +1,22 @@
+service:
+    host: 127.0.0.1
+server:
+    port: 8083
+spring:
+    application:
+        name: sptring-test
+    config:
+        import: nacos:nacos-config-example.properties?refresh=true
+    datasource:
+        maintenance:
+            type: com.zaxxer.hikari.HikariDataSource
+            username: root
+            password: 123456
+            url: jdbc:mysql://${service.host}:3306/k15?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+            driver-class-name: com.mysql.cj.jdbc.Driver
+        publish:
+            type: com.zaxxer.hikari.HikariDataSource
+            username: root
+            password: 123456
+            url: jdbc:mysql://${service.host}:3306/123?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+            driver-class-name: com.mysql.cj.jdbc.Driver
