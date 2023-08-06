@@ -1,0 +1,30 @@
+git命令
+
+git version -- 查看版本
+
+git config --global user.name "xxxx"  --设置用户名称
+git config --global user.email "xxxx"  --设置用户邮箱
+
+git add 文件名
+git add . 添加全部文件（.表示当前目录下所有文件）
+git commit 提交文件
+
+git branch -M main	--创建main分支
+git remote add origin https://github.com/1dh4826/spring-study.git  --设置远程仓库地址
+git push -u origin main 		-- 将本地文件上传到远程仓库
+
+git config --global --unset http.proxy      --取消http代理
+
+git config --global --unset https.proxy    --取消https代理
+
+git clone 仓库地址  -- 克隆远端仓库
+
+git remote add upstream 仓库地址   -- 设置上游仓库
+
+git checkout -b 分支名称  --创建分支，并切换到分支
+
+git push --推送到远端仓库
+
+git push -u origin  分支名称  --参数指明 push源 和分支
+
+git fetch upstream --从上游更新代码
